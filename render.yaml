@@ -44,6 +44,7 @@ services:
   name: redis
   env: docker
   dockerfilePath: ./redis/Dockerfile
+  dockerContext: ./redis
   plan: standard
   autoDeploy: false
   disk:

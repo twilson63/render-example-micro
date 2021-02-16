@@ -12,10 +12,10 @@
     node-fetch "^2.6.1"
     ramda "^0.27.1"
 
-"@hyper63/adapter-elasticsearch@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@hyper63/adapter-elasticsearch/-/adapter-elasticsearch-0.0.3.tgz#5df4206801b5888e2b648d4f25dacbf097354649"
-  integrity sha512-x8t+tlyCbVc/06Vc89J1iBo9OZ8v+oxikj1EsmRaYxukyRaB44GRg/ERnkmAZQOocJppCSJWV7/MZZVPO1q2Jg==
+"@hyper63/adapter-elasticsearch@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@hyper63/adapter-elasticsearch/-/adapter-elasticsearch-0.0.4.tgz#37f4380c3adca963d520af3dc7aa5038f3e587aa"
+  integrity sha512-ka4JejJkL3gN6knBQuEeS42gr2TYBDyrflnGJfAVu/Uc3pIKh2qlkCjVv9pfDuhJgJKwQredBwLhG0c6/SF6nw==
   dependencies:
     "@vercel/fetch-retry" "^5.0.3"
     crocks "^0.12.4"

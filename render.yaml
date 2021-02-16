@@ -30,6 +30,11 @@ services:
         name: elasticsearch
         type: pserv
         property: host
+    - key: MINIO_HOST
+      fromService:
+        name: minio
+        type: pserv
+        property: host
 - type: pserv
   name: couchdb
   env: docker
@@ -74,4 +79,20 @@ services:
       value: single-node
     - key: cluster.name
       value: elastic
+- type: pserv
+  name: minio
+  env: docker
+  plan: standard
+  dockerfilePath: ./minio/Dockerfile
+  dockerContext: ./minio
+  disk:
+    name: miniodata
+    mountPath: /data
+    sizeGB: 20
+  autoDeploy: false
+  envVars:
+    - key: MINIO_ACCESS_KEY
+      value: admin
+    - key: MINIO_SECRET_KEY
+      value: password
 

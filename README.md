@@ -11,5 +11,7 @@ This is a template repository for running hyper63 on render.
 
 ## Environment
 
-When deployed, go to Environment and add a SECRET, this secret will be used to validate JWT Tokens for 
-the service
+When deployed, go to Environment and grap the SECRET value, this secret will be used to validate JWT Tokens for 
+the service.
+
+> NOTE: this deployment plan will create 5 services on render, 4 will cost $15/mo and 1 will cost $7/mo.

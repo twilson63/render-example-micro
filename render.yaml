@@ -1,0 +1,37 @@
+services:
+- type: web
+  name: hyper63
+  env: node
+  buildCommand: yarn
+  startCommand: yarn start
+  envVars:
+    - key: USER
+      fromService:
+        name: couchdb
+        type: pserv
+        envVarKey: COUCHDB_USER
+    - key: PASSWORD
+      fromService:
+        name: couchdb
+        type: pserv
+        envVarKey: COUCHDB_PASSWORD
+    - key: COUCHDB_HOST
+      fromService:
+        name: couchdb
+        type: pserv
+        property: hostport
+- type: pserv
+  name: couchdb
+  env: docker
+  plan: standard
+  disk:
+    name: couchdata
+    mountPath: /opt/couchdb/data
+    sizeGB: 50
+  autoDeploy: false
+  envVars:
+    - key: COUCHDB_USER
+      value: admin
+    - key: COUCHDB_PASSWORD
+      value: password
+

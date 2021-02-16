@@ -5,6 +5,8 @@ services:
   buildCommand: yarn
   startCommand: yarn start
   envVars:
+    - key: SECRET
+      generateValue: true
     - key: USER
       fromService:
         name: couchdb

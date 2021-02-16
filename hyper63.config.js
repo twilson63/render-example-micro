@@ -3,6 +3,7 @@ import couchdb from '@hyper63/adapter-couchdb'
 import redis from '@hyper63/adapter-redis'
 import es from '@hyper63/adapter-elasticsearch'
 import minio from '@hyper63/adapter-minio'
+import jwt from './jwt.js'
 
 
 const COUCH = `http://${process.env.USER}:${process.env.PASSWORD}@${process.env.COUCHDB_HOST}:5984`
@@ -17,5 +18,6 @@ export default {
     { port: 'cache', plugins: [redis({url: REDIS})]},
     { port: 'search', plugins: [es({url: ES})]},
     { port: 'storage', plugins: [minio({url: MINIO})]}
-  ]
+  ],
+  middleware: [jwt]
 }

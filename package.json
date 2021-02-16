@@ -10,7 +10,8 @@
     "@hyper63/adapter-minio": "^1.0.0",
     "@hyper63/adapter-redis": "^1.0.2",
     "@hyper63/app-express": "^1.0.11",
-    "@hyper63/core": "^1.2.6"
+    "@hyper63/core": "^1.2.6",
+    "express-jwt": "^6.0.0"
   },
   "scripts": {
     "start": "node index.js"

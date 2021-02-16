@@ -20,6 +20,11 @@ services:
         name: couchdb
         type: pserv
         property: hostport
+    - key: REDIS_HOST
+      fromService:
+        name: redis
+        type: pserv
+        property: hostport
 - type: pserv
   name: couchdb
   env: docker
@@ -35,4 +40,14 @@ services:
       value: admin
     - key: COUCHDB_PASSWORD
       value: password
+- type: pserv
+  name: redis
+  env: docker
+  dockerfilePath: ./redis/Dockerfile
+  plan: standard
+  autoDeploy: false
+  disk:
+    name: redisdata
+    mountPath: /var/lib/redis
+    sizeGB: 10
 

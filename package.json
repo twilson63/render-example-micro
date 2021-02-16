@@ -5,7 +5,7 @@
   "type": "module",
   "license": "MIT",
   "dependencies": {
-    "@hyper63/adapter-couchdb": "^0.0.10",
+    "@hyper63/adapter-couchdb": "^0.0.11",
     "@hyper63/adapter-elasticsearch": "^0.0.3",
     "@hyper63/adapter-minio": "^1.0.0",
     "@hyper63/adapter-redis": "^1.0.2",

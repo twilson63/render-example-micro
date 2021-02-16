@@ -19,7 +19,7 @@ services:
       fromService:
         name: couchdb
         type: pserv
-        property: hostport
+        property: host
     - key: REDIS_HOST
       fromService:
         name: redis
@@ -29,7 +29,7 @@ services:
       fromService:
         name: elasticsearch
         type: pserv
-        property: hostport
+        property: host
 - type: pserv
   name: couchdb
   env: docker

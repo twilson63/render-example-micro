@@ -25,6 +25,11 @@ services:
         name: redis
         type: pserv
         property: hostport
+    - key: SEARCH_HOST
+      fromService:
+        name: elasticsearch
+        type: pserv
+        property: hostport
 - type: pserv
   name: couchdb
   env: docker
@@ -51,4 +56,22 @@ services:
     name: redisdata
     mountPath: /var/lib/redis
     sizeGB: 10
+- type: pserv
+  name: elasticsearch
+  env: docker
+  plan: standard
+  dockerfilePath: ./elastic/Dockerfile
+  dockerContext: ./elastic
+  disk:
+    name: esdata
+    mountPath: /usr/share/elasticsearch/data
+    sizeGB: 10
+  autoDeploy: false
+  envVars:
+    - key: ES_JAVA_OPTS
+      value: "-Xms512m -Xmx5123m"
+    - key: discovery.type
+      value: single-node
+    - key: cluster.name
+      value: elastic
 

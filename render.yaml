@@ -24,6 +24,7 @@ services:
   name: couchdb
   env: docker
   plan: standard
+  dockerfilePath: ./couchdb/Dockerfile
   disk:
     name: couchdata
     mountPath: /opt/couchdb/data

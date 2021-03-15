@@ -30,20 +30,20 @@
     crocks "^0.12.4"
     minio "^7.0.16"
 
-"@hyper63/adapter-redis@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@hyper63/adapter-redis/-/adapter-redis-1.0.2.tgz#8541a39c182c3eb4aad0cf198ebd79dd60403119"
-  integrity sha512-byWNdsil0+0Ciq9XaRkHNHeL2dGVL7TVTe15Gbtl3kciGnoBeNAy6ZNeZZOi5DXYcd2U4+Dtg9dR5PsaguYvsw==
+"@hyper63/adapter-redis@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@hyper63/adapter-redis/-/adapter-redis-1.1.1.tgz#831a6111190d98c2bb9b69548488a9863a5fc47f"
+  integrity sha512-AUWW/LRyK0ebZZTT7fVNvxcbfHe5MyNNx0eFinxh1RkP1Wr7DfYncr+SIA4Rr0efjZAM3m8Eux7uIY3S2EAa/w==
   dependencies:
     crocks "^0.12.4"
     ramda "^0.27.1"
     redis "^3.0.2"
     zod "^2.0.0-beta.30"
 
-"@hyper63/app-express@^1.0.11":
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/@hyper63/app-express/-/app-express-1.0.11.tgz#c2436a1d244e3a03d660cb5f6dc991e87e753380"
-  integrity sha512-WnrQ9+y4jgpaxL1mdNNJW+E6RTS8WO+MHwalLdERKN3A3FEOeoXMt7Iu2NrpDh4QXU0MA/VxLel5CI/wflsp5g==
+"@hyper63/app-express@^1.0.12":
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/@hyper63/app-express/-/app-express-1.0.12.tgz#58eb2e050646c2144e8a4b37f4ff74d22b325de6"
+  integrity sha512-KEtWlnOO/QAQzPh8gc/KVWhSn8xVPDZJZpBiS3wlTMz54ZP8uEcwZ0DuVxaSGpMPoFXbHGdN3SnmiU2bIYKa6g==
   dependencies:
     cors "^2.8.5"
     express "^4.17.1"
@@ -51,12 +51,12 @@
     mime "^2.4.6"
     multer "^1.4.2"
 
-"@hyper63/core@^1.2.6":
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/@hyper63/core/-/core-1.2.6.tgz#bf9cebba394856de4fdfb864432cafad0ef68520"
-  integrity sha512-h/DREyHwilL07jCoIqwrxonoqSgAHEJVO4l0+4yteAZchfWwH+Qgaj0qPQMOXf8pPqG4L1Nd44l123MP9yFdTw==
+"@hyper63/core@^1.2.11":
+  version "1.2.11"
+  resolved "https://registry.yarnpkg.com/@hyper63/core/-/core-1.2.11.tgz#55b1e9e5f4dba6fecd5e38db7b8269d77757269a"
+  integrity sha512-lMTksqPoZTZriBW/Dt3mNACXyflaAMndEMNN/vZ50d/S8JCy5lSZ5IurLBx9MkT2Ic4ZQdAdJyD4ScjXfd9oFQ==
   dependencies:
-    "@hyper63/port-cache" "^1.0.0"
+    "@hyper63/port-cache" "^1.1.1"
     "@hyper63/port-data" "^1.0.9"
     "@hyper63/port-search" "^1.0.1"
     "@hyper63/port-storage" "^1.0.0"
@@ -64,10 +64,10 @@
     cuid "^2.1.8"
     ramda "^0.27.1"
 
-"@hyper63/port-cache@^1.0.0":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@hyper63/port-cache/-/port-cache-1.0.1.tgz#64eb322a9fe84b2e6905507ab6f516f439719ce5"
-  integrity sha512-rcNJZAalPSODBzxJVdVyDW7DHQPJn8hhYUfg0nF/KIIcAo9gDvW8QAs9x8bD59EFlohlQTioNbTei1ocyGTvGw==
+"@hyper63/port-cache@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@hyper63/port-cache/-/port-cache-1.1.1.tgz#f3f6b442967e1c9051bfa7f22e75ace4f17182b7"
+  integrity sha512-kIt26VkgDkDmcu0zJJlp0iVg1RjRlhfetdyC3DzD1m0l6RGg+sghhjlGE/93GYwB3meg0shnzGemx9p2Nuwiqw==
   dependencies:
     zod "^2.0.0-beta.22"
 

@@ -3,6 +3,7 @@ import couchdb from '@hyper63/adapter-couchdb'
 import redis from '@hyper63/adapter-redis'
 import es from '@hyper63/adapter-elasticsearch'
 import minio from '@hyper63/adapter-minio'
+import zmq from '@hyper63/adapter-zmq'
 import jwt from './jwt.js'
 
 
@@ -14,10 +15,11 @@ const MINIO = `http://${process.env.USER}:${process.env.PASSWORD}@${process.env.
 export default {
   app: express,
   adapters: [
-    { port: 'data', plugins: [couchdb({url: COUCH })]},
-    { port: 'cache', plugins: [redis({url: REDIS})]},
-    { port: 'search', plugins: [es({url: ES})]},
-    { port: 'storage', plugins: [minio({url: MINIO})]}
+    { port: 'data', plugins: [couchdb({ url: COUCH })] },
+    { port: 'cache', plugins: [redis({ url: REDIS })] },
+    { port: 'search', plugins: [es({ url: ES })] },
+    { port: 'storage', plugins: [minio({ url: MINIO })] },
+    { port: 'queue', plugins: [zmq('7373')] }
   ],
   middleware: [jwt]
 }

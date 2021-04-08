@@ -12,10 +12,10 @@
     node-fetch "^2.6.1"
     ramda "^0.27.1"
 
-"@hyper63/adapter-elasticsearch@^0.0.5":
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/@hyper63/adapter-elasticsearch/-/adapter-elasticsearch-0.0.5.tgz#2105f5dce30296d83b948b45fe9efac79709a712"
-  integrity sha512-WBXT0ezxQEKh3/E4nIUhgTC75Ot5wElLp3oJjEUUY1PzLVNlcki96sFzLzjzEDJppExWMdQdRoPkw+dcsAKsVA==
+"@hyper63/adapter-elasticsearch@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@hyper63/adapter-elasticsearch/-/adapter-elasticsearch-0.1.0.tgz#cf04c271cd4234d56803a559672c76f6bf14e7e4"
+  integrity sha512-NPtY1w8SJ2gKOCGvoFjLOlyKcPgGSXvfzd78q81mxKdAX7T6jnTVbHcoCqUYmVCURUDg0nEkGuddhjWWm5OtqQ==
   dependencies:
     "@vercel/fetch-retry" "^5.0.3"
     crocks "^0.12.4"
@@ -30,21 +30,22 @@
     crocks "^0.12.4"
     minio "^7.0.16"
 
-"@hyper63/adapter-redis@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@hyper63/adapter-redis/-/adapter-redis-1.1.1.tgz#831a6111190d98c2bb9b69548488a9863a5fc47f"
-  integrity sha512-AUWW/LRyK0ebZZTT7fVNvxcbfHe5MyNNx0eFinxh1RkP1Wr7DfYncr+SIA4Rr0efjZAM3m8Eux7uIY3S2EAa/w==
+"@hyper63/adapter-redis@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@hyper63/adapter-redis/-/adapter-redis-1.2.3.tgz#bc2e9995f67e12f44fc96ced3f586c282303fe7b"
+  integrity sha512-BASSRkIcfFLgbPTu9JADyO/L0nSzcT3jt9Dtri450shiWykhKd1G3KUo6W14rzAxStV6kycsQHA+e/6z+R+rKQ==
   dependencies:
     crocks "^0.12.4"
     ramda "^0.27.1"
     redis "^3.0.2"
-    zod "^2.0.0-beta.30"
+    zod "^3.0.0-alpha.33"
 
-"@hyper63/adapter-zmq@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@hyper63/adapter-zmq/-/adapter-zmq-0.0.3.tgz#47cc45e21c7e7b775059e226f3a3b2956ea2941a"
-  integrity sha512-hrfbBwtltwn1nwaEEQfjatu790zRDiIHZ4liniGptrjSPs/Gf4XVtZ5m0h+J8VjX+3taTX8XV9JxsZ4BueLgVA==
+"@hyper63/adapter-zmq@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@hyper63/adapter-zmq/-/adapter-zmq-0.0.4.tgz#04d031b9ddc3ffb1116a114c6c090805fc4d2a48"
+  integrity sha512-o+AtoDSZemA8cennuPSPQPt+WYm69igm0ZEJfuPHYacbh+8kNiJzrTj9PWW3EA7i33s50Z03haQXjaKYMbLtTQ==
   dependencies:
+    "@hyper63/port-queue" "^0.1.1"
     node-fetch "^2.6.1"
     ramda "^0.27.1"
     zeromq "^6.0.0-beta.6"
@@ -954,7 +955,7 @@ zeromq@^6.0.0-beta.6:
   dependencies:
     node-gyp-build "^4.1.0"
 
-zod@^2.0.0-beta.22, zod@^2.0.0-beta.30:
+zod@^2.0.0-beta.22:
   version "2.0.0-beta.30"
   resolved "https://registry.yarnpkg.com/zod/-/zod-2.0.0-beta.30.tgz#67ec3305c4a106a7bf9ef72078de72892d485dbe"
   integrity sha512-nwCSRXRy1jt0872mMXT2E6VVHXr2hO7jGEtwc/TDqOBb7gGodwAjsQ6UCS4XJLUmjVvmqLsuPvAIN8oL26weCQ==

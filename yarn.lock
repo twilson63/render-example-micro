@@ -30,10 +30,10 @@
     crocks "^0.12.4"
     minio "^7.0.16"
 
-"@hyper63/adapter-redis@^1.2.3":
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/@hyper63/adapter-redis/-/adapter-redis-1.2.3.tgz#bc2e9995f67e12f44fc96ced3f586c282303fe7b"
-  integrity sha512-BASSRkIcfFLgbPTu9JADyO/L0nSzcT3jt9Dtri450shiWykhKd1G3KUo6W14rzAxStV6kycsQHA+e/6z+R+rKQ==
+"@hyper63/adapter-redis@^1.2.4":
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/@hyper63/adapter-redis/-/adapter-redis-1.2.4.tgz#5ab0be35b692d583f803580d384432af5608313b"
+  integrity sha512-MIlgEg2dahgsfoB16T6utndlcX1CBnxAN+VAEqYYRmheLZAUcx+RXXHOnCkxfqKhe+CSzBMndf5dHxDHh7XbRg==
   dependencies:
     crocks "^0.12.4"
     ramda "^0.27.1"

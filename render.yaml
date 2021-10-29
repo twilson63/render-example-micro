@@ -1,100 +1,99 @@
 services:
-- type: web
-  name: hyper63
-  env: node
-  buildCommand: yarn
-  startCommand: yarn start
-  envVars:
-    - key: SECRET
-      generateValue: true
-    - key: USER
-      fromService:
-        name: couchdb
-        type: pserv
-        envVarKey: COUCHDB_USER
-    - key: PASSWORD
-      fromService:
-        name: couchdb
-        type: pserv
-        envVarKey: COUCHDB_PASSWORD
-    - key: COUCHDB_HOST
-      fromService:
-        name: couchdb
-        type: pserv
-        property: host
-    - key: REDIS_HOST
-      fromService:
-        name: redis
-        type: pserv
-        property: hostport
-    - key: SEARCH_HOST
-      fromService:
-        name: elasticsearch
-        type: pserv
-        property: host
-    - key: MINIO_HOST
-      fromService:
-        name: minio
-        type: pserv
-        property: host
-- type: pserv
-  name: couchdb
-  env: docker
-  plan: standard
-  dockerfilePath: ./couchdb/Dockerfile
-  disk:
-    name: couchdata
-    mountPath: /opt/couchdb/data
-    sizeGB: 50
-  autoDeploy: false
-  envVars:
-    - key: COUCHDB_USER
-      value: admin
-    - key: COUCHDB_PASSWORD
-      value: password
-- type: pserv
-  name: redis
-  env: docker
-  dockerfilePath: ./redis/Dockerfile
-  dockerContext: ./redis
-  plan: standard
-  autoDeploy: false
-  disk:
-    name: redisdata
-    mountPath: /var/lib/redis
-    sizeGB: 10
-- type: pserv
-  name: elasticsearch
-  env: docker
-  plan: standard
-  dockerfilePath: ./elastic/Dockerfile
-  dockerContext: ./elastic
-  disk:
-    name: esdata
-    mountPath: /usr/share/elasticsearch/data
-    sizeGB: 10
-  autoDeploy: false
-  envVars:
-    - key: ES_JAVA_OPTS
-      value: "-Xms512m -Xmx5123m"
-    - key: discovery.type
-      value: single-node
-    - key: cluster.name
-      value: elastic
-- type: pserv
-  name: minio
-  env: docker
-  plan: standard
-  dockerfilePath: ./minio/Dockerfile
-  dockerContext: ./minio
-  disk:
-    name: miniodata
-    mountPath: /data
-    sizeGB: 20
-  autoDeploy: false
-  envVars:
-    - key: MINIO_ACCESS_KEY
-      value: admin
-    - key: MINIO_SECRET_KEY
-      value: password
-
+  - type: web
+    name: hyper63
+    env: node
+    buildCommand: yarn
+    startCommand: yarn start
+    envVars:
+      - key: SECRET
+        generateValue: true
+      - key: USER
+        fromService:
+          name: couchdb
+          type: pserv
+          envVarKey: COUCHDB_USER
+      - key: PASSWORD
+        fromService:
+          name: couchdb
+          type: pserv
+          envVarKey: COUCHDB_PASSWORD
+      - key: COUCHDB_HOST
+        fromService:
+          name: couchdb
+          type: pserv
+          property: host
+      - key: REDIS_HOST
+        fromService:
+          name: redis
+          type: pserv
+          property: hostport
+      - key: SEARCH_HOST
+        fromService:
+          name: elasticsearch
+          type: pserv
+          property: host
+      - key: MINIO_HOST
+        fromService:
+          name: minio
+          type: pserv
+          property: host
+  - type: pserv
+    name: couchdb
+    env: docker
+    plan: standard
+    dockerfilePath: ./couchdb/Dockerfile
+    disk:
+      name: couchdata
+      mountPath: /opt/couchdb/data
+      sizeGB: 50
+    autoDeploy: false
+    envVars:
+      - key: COUCHDB_USER
+        value: admin
+      - key: COUCHDB_PASSWORD
+        value: password
+  - type: pserv
+    name: redis
+    env: docker
+    dockerfilePath: ./redis/Dockerfile
+    dockerContext: ./redis
+    plan: standard
+    autoDeploy: false
+    disk:
+      name: redisdata
+      mountPath: /var/lib/redis
+      sizeGB: 10
+  - type: pserv
+    name: elasticsearch
+    env: docker
+    plan: standard
+    dockerfilePath: ./elastic/Dockerfile
+    dockerContext: ./elastic
+    disk:
+      name: esdata
+      mountPath: /usr/share/elasticsearch/data
+      sizeGB: 10
+    autoDeploy: false
+    envVars:
+      - key: ES_JAVA_OPTS
+        value: "-Xms512m -Xmx5123m"
+      - key: discovery.type
+        value: single-node
+      - key: cluster.name
+        value: elastic
+  - type: pserv
+    name: minio
+    env: docker
+    plan: standard
+    dockerfilePath: ./minio/Dockerfile
+    dockerContext: ./minio
+    disk:
+      name: miniodata
+      mountPath: /data
+      sizeGB: 20
+    autoDeploy: false
+    envVars:
+      - key: MINIO_ACCESS_KEY
+        value: admin
+      - key: MINIO_SECRET_KEY
+        value: password

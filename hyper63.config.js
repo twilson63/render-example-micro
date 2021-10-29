@@ -1,5 +1,5 @@
 import express from '@hyper63/app-express'
-import couchdb from '@hyper63/adapter-couchdb'
+import couchdb from './couchdb-adapter/index.js'
 import redis from '@hyper63/adapter-redis'
 import es from '@hyper63/adapter-elasticsearch'
 import minio from '@hyper63/adapter-minio'

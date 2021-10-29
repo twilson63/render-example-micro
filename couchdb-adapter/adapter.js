@@ -69,6 +69,7 @@ module.exports = ({ config }) => {
     retrieveDocument: ({ db, id }) => retrieveDocument({ db, id })
       .map(omit(['_id', '_rev']))
       .map(assoc('id', id))
+      
       .toPromise(),
     updateDocument: ({ db, id, doc }) => {
       // need to retrieve the document if exists
